@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Snake Game by Nafis</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@1&display=swap');
   canvas {
   position: absolute;
   top: 0;
@@ -16,6 +17,8 @@
 
 body {
   background: #dddddd;
+  font-family: 'Tiro Bangla', serif;
+
 }
   </style>
 
