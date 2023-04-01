@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        cursor: url(data:image/png;base64,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),
+          auto;
+      }
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>/var/www/ Nafis Mahmud</title>
+    <meta
+      name="description"
+      content="Thoughts, stories and geeky stuffs, Nafis, nafis mahmud, mahmudm sheikh nafis mahmud, sheikh nafis, dotnafis, devnafis, webdevnafis, webnafis, Personal website of Nafis Mahmud"
+    />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="data:image/jpeg;base64,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"
+      alt="Sheikh Nafis Mahmud"
+    />
+
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./syntax-highlighting.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="canonical" href="https://snafis.com/" />
+
+    <meta property="og:site_name" content="/var/www/ Nafis Mahmud" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="/var/www/ Nafis Mahmud" />
+    <meta
+      property="og:description"
+      content="Thoughts, stories and geeky stuffs, Nafis, nafis mahmud, mahmudm sheikh nafis mahmud, sheikh nafis, dotnafis, devnafis, webdevnafis, webnafis, Personal website of Nafis Mahmud"
+    />
+    <meta property="og:url" content="https://snafis.com/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="/var/www/ of Nafis Mahmud" />
+    <meta
+      name="twitter:description"
+      content="Thoughts, stories and geeky stuffs, Nafis, nafis mahmud, mahmudm sheikh nafis mahmud, sheikh nafis, dotnafis, devnafis, webdevnafis, webnafis, Personal website of Nafis Mahmud"
+    />
+    <meta name="twitter:url" content="https://snafis.com/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "publisher": "/var/www/ Nafis Mahmud",
+        "url": "https://snafis.com/",
+        "description": "Thoughts, stories and geeky stuffs, Nafis, nafis mahmud, mahmudm sheikh nafis mahmud, sheikh nafis, dotnafis, devnafis, webdevnafis, webnafis, Personal website of Nafis Mahmud"
+      }
+    </script>
+  </head>
+
+  <body>
+    <div role="main" class="container">
+      <div class="row">
+        <div
+          class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1"
+        >
+          <div class="indentation-container">
+            <span class="control inline">{</span>
+            <div class="row indentation-content">
+              <div class="indentation indentation-toggle">
+                <div class="indentation-line"></div>
+              </div>
+              <div
+                class="col-xs-12 col-sm-11 col-md-11 col-lg-11 col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 hash"
+              >
+                <div class="indentation-container">
+                  <span class="attribute">"profile"</span>
+                  <span class="control inline">:</span>
+                  <span class="control inline">{</span>
+                  <div class="row indentation-content">
+                    <div class="indentation indentation-toggle">
+                      <div class="indentation-line"></div>
+                    </div>
+                    <div
+                      class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1"
+                    >
+                      <div>
+                        <span class="attribute">"name"</span>
+                        <span class="control inline">:</span>
+                        <span class="value"
+                          >"<a href="https://snafis.com/blog/">Nafis Mahmud</a
+                          >"</span
+                        >
+                        <span class="control inline">,</span>
+                      </div>
+
+                      <div>
+                        <span class="attribute">"bio"</span>
+                        <span class="control inline">:</span>
+                        <span class="value"
+                          >"Hi, my name is Nafis Mahmud, and I'm a college student with a passion for technology and web development. I'm also an avid learner and fast learner, always looking to acquire new skills and knowledge.
+<br>
+In addition to my interest in web development, I am also an aspiring automobile engineer.
+<br>I hope to connect with like-minded individuals through my website.
+
+<br>Love to learn new technologies. Besides these, I
+                          also love to write
+                          <a href="https://snafis.com/blog/" target="_blank"
+                            >blogs and tutorials</a
+                          >
+                          and listen tilawaat.
+
+Thank you for visiting my website, and I hope you find the information and content here valuable and informative."</span
+                        >
+                        <span class="control inline">,</span>
+                      </div>
+
+                      <div>
+                        <span class="attribute">"skills"</span>
+                        <span class="control inline">:</span>
+                        <span class="value"
+                          >"<b
+                            >can play a little with HTML5, CSS3, Javascript,
+                            PHP, JQuery</b
+                          >"</span
+                        >
+                        <span class="control inline">,</span>
+                      </div>
+
+                      <div class="indentation-container">
+                        <span class="attribute">"contact"</span>
+                        <span class="control inline">:</span>
+                        <span class="control inline">{</span>
+                        <div class="row indentation-content">
+                          <div class="indentation indentation-toggle">
+                            <div class="indentation-line"></div>
+                          </div>
+
+                          <div
+                            class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1"
+                          >
+                            <div>
+                              <span class="attribute">"phone"</span>
+                              <span class="control inline">:</span>
+                              <span class="value"
+                                ><a href="tel:+8801783844440"
+                                  >"+8801783844440"</a
+                                ></span
+                              >
+                              <span class="control inline">,</span>
+                            </div>
+
+                            <div>
+                              <span class="attribute">"email"</span>
+                              <span class="control inline">:</span>
+                              <span class="value"
+                                >"<a href="mailto:dotnafis@gmail.com"
+                                  >dotnafis@gmail.com</a
+                                >"</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <span class="indentation-ellipsis indentation-toggle"
+                          >...</span
+                        >
+                        <span class="control inline">}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="indentation-ellipsis indentation-toggle"
+                    >...</span
+                  >
+                  <span class="control inline">}</span>
+                  <span class="control inline">,</span>
+                </div>
+
+                <div class="indentation-container">
+                  <span class="attribute">"follow_on"</span>
+                  <span class="control inline">:</span>
+                  <span class="control inline">[</span>
+                  <div class="row indentation-content">
+                    <div class="indentation indentation-toggle">
+                      <div class="indentation-line"></div>
+                    </div>
+                    <div
+                      class="col-xs-12 col-sm-11 col-md-11 col-lg-11 col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1"
+                    >
+                      <div>
+                        <span class="value"
+                          >"<a href="https://snafis.com/blog/" target="_blank"
+                            >blog</a
+                          >"</span
+                        >
+                        <span class="control inline">,</span>
+                      </div>
+
+                      <div>
+                        <span class="value"
+                          >"<a
+                            href="https://www.facebook.com/DotNafis"
+                            target="_blank"
+                            >facebook</a
+                          >"</span
+                        >
+                        <span class="control inline">,</span>
+                      </div>
+
+                      <div>
+                        <span class="value"
+                          >"<a
+                            href="https://twitter.com/sknafismahmud"
+                            target="_blank"
+                            >twitter</a
+                          >"</span
+                        >
+                        <span class="control inline">,</span>
+                      </div>
+
+                      <div>
+                        <span class="value"
+                          >"<a
+                            href="https://github.com/dotnafis"
+                            target="_blank"
+                            >github</a
+                          >"</span
+                        >
+                        <span class="control inline">,</span>
+                      </div>
+
+                      <div>
+                        <span class="value"
+                          >"<a
+                            href="https://bd.linkedin.com/in/sknafis"
+                            target="_blank"
+                            >linkedin</a
+                          >"</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <span class="indentation-ellipsis indentation-toggle"
+                    >...</span
+                  >
+                  <span class="control inline">]</span>
+                  <span class="control inline">,</span>
+                </div>
+
+                <div>
+                  <span class="attribute">"copyleft"</span>
+                  <span class="control inline">:</span>
+                  <span class="value"
+                    >"<a href="https://snafis.com/">Nafis Mahmud</a> - 2022. All
+                    wrongs reserved."</span
+                  >
+                </div>
+              </div>
+            </div>
+            <span class="indentation-ellipsis indentation-toggle">...</span>
+            <span class="control inline">}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="cursor"></span>
+    <div class="cursor"></div>
+    <!-- <div class="trail">
+    <div class="pointer pointer1">Nafis</div>
+    <div class="pointer pointer2">Nafis</div>
+    <div class="pointer pointer3">Nafis</div>
+    <div class="pointer pointer4"></div>
+    <div class="pointer pointer5"></div>
+  </div> -->
+
+    <script src="jquery_002.js" type="javascript"></script>
+    <script src="./jquery.js" type="javascript"></script>
+    <script src="./bootstrap.js" type="javascript"></script>
+    <script src="./layout.js" type="javascript"></script>
+  </body>
+</html>
